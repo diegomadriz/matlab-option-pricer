@@ -1,0 +1,42 @@
+{
+  "submission_date": "2025-12-30",
+  "archive_sha256": "975c761ea18bbf9e8ff3103c671dabad2aa3be9224913a7628bd22914b7bb9f2",
+  "files": [
+    {
+      "file": "pricing/black_scholes_price.m",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/pricing/black_scholes_price.m",
+      "bytes": 845,
+      "sha256": "4e50f6043725076b63bcf1bc62f629d6e9d14665ec40a8d15877bfddf89fbe69"
+    },
+    {
+      "file": "pricing/mc_euro_price.m",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/pricing/mc_euro_price.m",
+      "bytes": 1030,
+      "sha256": "9369c0301089e7a1e71572a11ca4ff05e5d49a234530c73ccfadbf01086c403e"
+    },
+    {
+      "file": "pricing/simulate_gbm_paths.m",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/pricing/simulate_gbm_paths.m",
+      "bytes": 701,
+      "sha256": "20a429bf8ab968046da621bb9c53013c0494cc2735f8e1a449b9851ad8ad0636"
+    },
+    {
+      "file": "demo/demo_option_pricing.m",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/demo/demo_option_pricing.m",
+      "bytes": 1019,
+      "sha256": "4d585506c0872b19f5fbaecc73bd9f78d299bb2b480a2d68f591644bbef4a92c"
+    },
+    {
+      "file": "app/Final_work.mlapp",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/app/Final_work.mlapp",
+      "bytes": 139511,
+      "sha256": "d03a3cb67e57f042090b6424d63ccdf366b9d39b309d1772ceeb435cd0afe52e"
+    },
+    {
+      "file": "Report/MATLAB_Option_Pricer_DiegoRamirez.pdf",
+      "zip_member": "DiegoAlberto_RamirezMadriz_FinalWork/Report/MATLAB_Option_Pricer_DiegoRamirez.pdf",
+      "bytes": 433535,
+      "sha256": "374e34cb353bc210dc8023a5eeff3ca303f66c7e5e68df344b1d696916127a02"
+    }
+  ]
+}

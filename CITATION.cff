@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this educational project, please cite it using this metadata."
+title: "Interactive MATLAB European Option Pricer"
+authors:
+  - family-names: "Ramirez Madriz"
+    given-names: "Diego"
+type: software
+license: MIT
+url: "https://www.diegoramirezmadriz.dev/projects/matlab-european-option-pricer"
+abstract: "Educational MATLAB interface combining Black-Scholes pricing, Monte Carlo estimation and synthetic GBM paths."
+repository-code: "https://github.com/diegomadriz/matlab-option-pricer"
+date-released: "2026-10-03"

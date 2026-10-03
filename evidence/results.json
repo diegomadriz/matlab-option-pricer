@@ -1,0 +1,51 @@
+{
+  "period": "December 2025",
+  "app_defaults": {
+    "S0": 100,
+    "K": 102,
+    "r": 0.05,
+    "sigma": 0.2,
+    "T": 1,
+    "nSteps": 252,
+    "nPaths": 50000,
+    "display_cap": 30
+  },
+  "demo_parameters": {
+    "S0": 100,
+    "K": 100,
+    "r": 0.05,
+    "sigma": 0.2,
+    "T": 1,
+    "nSteps": 252,
+    "nPaths": 5000,
+    "display_paths": 20,
+    "histogram_bins": 50
+  },
+  "pricing_benchmark": {
+    "black_scholes": null,
+    "monte_carlo_estimate": null,
+    "standard_error": null,
+    "seed": null
+  },
+  "report_figures": [
+    {
+      "file": "figures/gbm-paths.png",
+      "report_page": 8,
+      "report_figure": 1,
+      "observation": "Synthetic paths start together and diverge."
+    },
+    {
+      "file": "figures/terminal-prices.png",
+      "report_page": 9,
+      "report_figure": 2,
+      "observation": "Terminal-price histogram; no raw samples or seed were saved."
+    }
+  ],
+  "provenance": {
+    "app": "app/Final_work.mlapp: Diego re-saved R2026a app, 2026-10-03",
+    "demo": "demo/demo_option_pricing.m",
+    "figures": "Report/MATLAB_Option_Pricer_DiegoRamirez.pdf",
+    "benchmark": "No numerical benchmark saved with December submission; post-course app examples are in example-runs-2026.json."
+  },
+  "source_history": "history.json"
+}

@@ -1,10 +1,13 @@
+% Edited for publication (Oct 2026): path setup, estimate wording and formatting; parameters retained.
 % demo_option_pricing.m
-% DRAFT DEMO FUNCTION
-%   Returns obtained Black-SCholes and MonteCarlo prices, and the standard
-%   error between them. 
-%   
+% Standalone demonstration adapted for publication.
+%   Returns a Black-Scholes value, Monte Carlo estimate, and the standard
+%   error of the Monte Carlo estimate.
+%
 
-clear; clc;
+clear;
+clc;
+addpath(fullfile(fileparts(mfilename('fullpath')), '..', 'pricing'));
 
 % initial demo params
 S0 = 100;
@@ -22,10 +25,10 @@ bsPrice = black_scholes_price(S0, K, r, sigma, T, 'call');
 
 % display results in console
 fprintf('Black--Scholes price: %.4f\n', bsPrice);
-fprintf('Monte Carlo price   : %.4f\n', mcPrice);
+fprintf('Monte Carlo estimate: %.4f\n', mcPrice);
 fprintf('Standard error      : %.4f\n\n', mcErr);
 
-% simulate the GBM paths 
+% simulate the GBM paths
 paths = simulate_gbm_paths(S0, r, sigma, T, nSteps, 20);
 
 % plot GBM paths for demo, if it works it should look like spaghetti
@@ -37,7 +40,7 @@ ylabel('Asset price');
 
 % terminal prices histogram
 figure;
-histogram(paths(end,:), 50);
+histogram(paths(end, :), 50);
 title('Distribution of Terminal Asset Prices');
 xlabel('Price');
 ylabel('Frequency');

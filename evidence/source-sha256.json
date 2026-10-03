@@ -1,0 +1,50 @@
+[
+  {
+    "file": "tests/fixtures/original/black_scholes_price.m.txt",
+    "origin": "December 30, 2025 course submission",
+    "bytes": 845,
+    "sha256": "4e50f6043725076b63bcf1bc62f629d6e9d14665ec40a8d15877bfddf89fbe69"
+  },
+  {
+    "file": "tests/fixtures/original/mc_euro_price.m.txt",
+    "origin": "December 30, 2025 course submission",
+    "bytes": 1030,
+    "sha256": "9369c0301089e7a1e71572a11ca4ff05e5d49a234530c73ccfadbf01086c403e"
+  },
+  {
+    "file": "tests/fixtures/original/simulate_gbm_paths.m.txt",
+    "origin": "December 30, 2025 course submission",
+    "bytes": 701,
+    "sha256": "20a429bf8ab968046da621bb9c53013c0494cc2735f8e1a449b9851ad8ad0636"
+  },
+  {
+    "file": "app/Final_work.mlapp",
+    "origin": "Diego re-saved in App Designer, R2026a Update 5, 2026-10-03",
+    "bytes": 137428,
+    "sha256": "d5f8d2e911e1138f0608e2d87b9de1aaad7dd46f7e1b4e69a57e5e144506858c"
+  },
+  {
+    "file": "Report/MATLAB_Option_Pricer_DiegoRamirez.pdf",
+    "origin": "December 30, 2025 course submission",
+    "bytes": 433535,
+    "sha256": "374e34cb353bc210dc8023a5eeff3ca303f66c7e5e68df344b1d696916127a02"
+  },
+  {
+    "file": "docs/images/pricer.png",
+    "origin": "Diego unseeded Pricer screenshot, 2026-10-03",
+    "bytes": 224488,
+    "sha256": "fe73fe961299cafc6fa99e6ac803f657a3044467e4a511945caa98a1a0e3e5a6"
+  },
+  {
+    "file": "evidence/figures/gbm-paths.png",
+    "origin": "Image object extracted from December course report",
+    "bytes": 289959,
+    "sha256": "41ad35f61e6b577874fd41dcbc5bc659d1c6c50efd55d78443a931b56d9ee936"
+  },
+  {
+    "file": "evidence/figures/terminal-prices.png",
+    "origin": "Image object extracted from December course report",
+    "bytes": 42122,
+    "sha256": "79db5f62045f90612103e5e564cdfae7be565cbf2cf92b44a5c248bbc84cf90f"
+  }
+]

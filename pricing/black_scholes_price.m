@@ -1,12 +1,20 @@
 function price = black_scholes_price(S0, K, r, sigma, T, optionType)
-%BLACK_SCHOLES_PRICE Computes the Black-Scholes price of a European call or put.
-%   S0         - current underlying price
-%   K          - strike price
-%   r          - risk-free interest rate (annual)
-%   sigma      - volatility (annual)
-%   T          - time to maturity in years
-%   optionType - 'call' or 'put'
+    % Edited for publication (Oct 2026): scalar input guards and formatting; pricing formulas retained.
+    % BLACK_SCHOLES_PRICE Computes the Black-Scholes price of a European call or put.
+    %   S0         - current underlying price
+    %   K          - strike price
+    %   r          - risk-free interest rate (annual)
+    %   sigma      - volatility (annual)
+    %   T          - time to maturity in years
+    %   optionType - 'call' or 'put'
 
+    validate_model_inputs(S0, r, sigma, T);
+    if ~(isnumeric(K) && isscalar(K) && isreal(K) && isfinite(K) && K > 0)
+        error('OptionPricer:InvalidInput', 'K must be a finite positive scalar.');
+    end
+    validate_option_type(optionType);
+
+    % [post-course fix 2026-07-09] Deterministic zero-maturity/volatility payoff.
     if T == 0 || sigma == 0
         forwardPrice = S0 .* exp(r .* T);
         if strcmpi(optionType, "call")
@@ -16,7 +24,7 @@ function price = black_scholes_price(S0, K, r, sigma, T, optionType)
         else
             error('optionType must be "call" or "put".');
         end
-        return;
+        return
     end
 
     % d1 and d2
