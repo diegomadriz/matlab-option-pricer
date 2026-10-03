@@ -11,7 +11,7 @@ optionType = 'call';
 addpath(fullfile(fileparts(mfilename('fullpath')), 'pricing'));
 rng(42, 'twister');
 bs = black_scholes_price(S0, K, r, sigma, T, optionType);
-[mc, stderr, discPayoffs, paths] = mc_euro_price(S0, K, r, sigma, T, Nsteps, Npaths, optionType); %#ok<ASGLU>
+[mc, stderr, discPayoffs, paths] = mc_euro_price(S0, K, r, sigma, T, Nsteps, Npaths, optionType);
 assert(abs(bs - 9.423365) <= 1e-6, 'OptionPricer:BlackScholesMismatch', ...
        'Black-Scholes differs from the recorded example.');
 fprintf('Post-course example: seed 42, MATLAB R2026a\n');

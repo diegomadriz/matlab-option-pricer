@@ -19,7 +19,7 @@ function testRecordedDefaultsMatchApp(testCase)
     evidence = jsondecode(fileread(fullfile(root, 'evidence', 'results.json')));
     directory = tempname;
     mkdir(directory);
-    cleanup = onCleanup(@() rmdir(directory, 's')); %#ok<NASGU>
+    cleanup = onCleanup(@() rmdir(directory, 's'));
     unzip(fullfile(root, 'app', 'Final_work.mlapp'), directory);
     document = fileread(fullfile(directory, 'matlab', 'document.xml'));
     fields = {'S0EditField', 'KEditField', 'rEditField', 'SigmaEditField', ...
@@ -54,7 +54,7 @@ function testArchivalEntryPoint(testCase)
     root = testCase.TestData.root;
     directory = tempname;
     mkdir(directory);
-    cleanup = onCleanup(@() rmdir(directory, 's')); %#ok<NASGU>
+    cleanup = onCleanup(@() rmdir(directory, 's'));
     configuration = restore_archive(directory);
     saved = readtable(fullfile(directory, 'app-defaults.csv'));
     testCase.verifyEqual(saved, configuration);
@@ -106,6 +106,6 @@ end
 function bytes = readBytes(filename)
     file = fopen(filename, 'rb');
     assert(file >= 0, 'Could not read evidence.');
-    cleanup = onCleanup(@() fclose(file)); %#ok<NASGU>
+    cleanup = onCleanup(@() fclose(file));
     bytes = fread(file, Inf, '*uint8');
 end
