@@ -7,6 +7,18 @@ function price = black_scholes_price(S0, K, r, sigma, T, optionType)
 %   T          - time to maturity in years
 %   optionType - 'call' or 'put'
 
+    if T == 0 || sigma == 0
+        forwardPrice = S0 .* exp(r .* T);
+        if strcmpi(optionType, "call")
+            price = exp(-r .* T) .* max(forwardPrice - K, 0);
+        elseif strcmpi(optionType, "put")
+            price = exp(-r .* T) .* max(K - forwardPrice, 0);
+        else
+            error('optionType must be "call" or "put".');
+        end
+        return;
+    end
+
     % d1 and d2
     d1 = (log(S0 ./ K) + (r + 0.5 * sigma.^2) .* T) ./ (sigma .* sqrt(T));
     d2 = d1 - sigma .* sqrt(T);
