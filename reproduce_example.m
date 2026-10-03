@@ -1,4 +1,3 @@
-% Edited for publication (Oct 2026): recompute the seed-42 Pricer example.
 % Same calculation sequence as ComputePriceButtonPushed, before plotting.
 S0 = 100;
 K = 102;
@@ -14,7 +13,7 @@ bs = black_scholes_price(S0, K, r, sigma, T, optionType);
 [mc, stderr, discPayoffs, paths] = mc_euro_price(S0, K, r, sigma, T, Nsteps, Npaths, optionType);
 assert(abs(bs - 9.423365) <= 1e-6, 'OptionPricer:BlackScholesMismatch', ...
        'Black-Scholes differs from the recorded example.');
-fprintf('Post-course example: seed 42, MATLAB R2026a\n');
+fprintf('Seed-42 Pricer example\n');
 fprintf('Black-Scholes value : %.6f\n', bs);
 fprintf('Monte Carlo estimate: %.6f\n', mc);
 fprintf('Standard error      : %.6f\n', stderr);

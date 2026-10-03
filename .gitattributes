@@ -1,10 +1,6 @@
 * text=auto
 *.m text eol=lf
-*.md text eol=lf
-*.json text eol=lf
-*.yml text eol=lf
-*.ipynb linguist-documentation
 *.mlapp -text -diff -merge
 *.pdf -text -diff -merge
 *.png -text -diff -merge
-/tests/fixtures/original/* -text linguist-generated
+/tests/fixtures/original/* -text

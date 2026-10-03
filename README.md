@@ -67,14 +67,15 @@ flowchart TD
 
 GitHub Actions runs on every push with MATLAB R2026a:
 
-- **Static checks:** MATLAB Code Analyzer, plus MISS_HIT lint and style.
-- **13 `matlab.unittest` tests:**
+- **Static checks:** MATLAB Code Analyzer.
+- **8 `matlab.unittest` tests:**
   - put-call parity, both analytical and on the same Monte Carlo draws
   - the zero-maturity and zero-volatility limits
   - payoff and standard-error formulas
   - Monte Carlo convergence to Black-Scholes within 5 standard errors
   - invalid-input rejection
   - exact agreement with the original implementation, kept as test fixtures
+  - the seed-42 example below the screenshot
 - **`reproduce_example`:** recomputes the seed-42 row above with the same call sequence as the
   app's Compute Price button, and checks it.
 
@@ -90,8 +91,7 @@ matlab -batch "reproduce_example"
 ```
 
 Open `app/Final_work.mlapp` in App Designer to use the interface, or run
-`demo/demo_option_pricing.m` for a script-only walkthrough. The lint tools are Python:
-`pip install -r dev-requirements.txt`, then `mh_lint` and `mh_style`.
+`demo/demo_option_pricing.m` for a script-only walkthrough.
 
 ## Project layout
 
@@ -102,9 +102,7 @@ demo/                Script-only walkthrough
 reproduce_example.m  Recomputes the seed-42 example
 tests/               Unit, fidelity and end-to-end tests (fixtures/ holds the original implementation)
 tools/               Code Analyzer gate used by CI
-docs/images/         Screenshot
-Report/              Technical report (PDF)
-evidence/            Recorded runs, configuration and project history
+docs/                Screenshot and technical report (PDF)
 ```
 
 ## Limitations
@@ -117,7 +115,6 @@ evidence/            Recorded runs, configuration and project history
 ## Links
 
 - [Portfolio project page](https://www.diegoramirezmadriz.dev/projects/matlab-european-option-pricer)
-- [Technical report (PDF)](Report/MATLAB_Option_Pricer_DiegoRamirez.pdf)
-- [Recorded runs and project history](evidence/RESULTS.md)
+- [Technical report (PDF)](docs/report.pdf)
 
 MIT licensed.

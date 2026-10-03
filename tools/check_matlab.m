@@ -1,5 +1,4 @@
 function check_matlab
-    % Edited for publication (Oct 2026): publication verification or packaging utility.
     % CHECK_MATLAB Require MATLAB Code Analyzer to report no issues in text code.
     root = fileparts(fileparts(mfilename('fullpath')));
     files = [dir(fullfile(root, 'pricing', '*.m')); ...

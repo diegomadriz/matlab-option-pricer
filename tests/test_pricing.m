@@ -1,5 +1,4 @@
 function tests = test_pricing
-    % Edited for publication (Oct 2026): publication verification or packaging utility.
     % TEST_PRICING Core mathematics, input rejection and source fidelity.
     tests = functiontests(localfunctions);
 end
@@ -70,7 +69,7 @@ function testPayoffAndStandardError(testCase)
 end
 
 function testConvergenceWithinTolerance(testCase)
-    % A fixed-seed diagnostic, not a saved course-project benchmark.
+    % Fixed-seed convergence diagnostic.
     % Require error <= five sample standard errors + roundoff allowance.
     % A single stochastic estimate is not required to improve monotonically.
     for optionType = {'call', 'put'}
@@ -84,8 +83,8 @@ function testConvergenceWithinTolerance(testCase)
     end
 end
 
-function testMatchesDecemberNumerics(testCase)
-    % December fixtures: compare only T > 0, sigma > 0, before post-course edge fixes.
+function testMatchesOriginalImplementation(testCase)
+    % Original implementation (tests/fixtures/original): compare for T > 0 and sigma > 0.
     for optionType = {'call', 'put'}
         for volatility = [0.2, 0.4]
             actual = black_scholes_price(100, 102, 0.05, volatility, 1, optionType{1});

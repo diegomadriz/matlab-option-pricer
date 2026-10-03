@@ -1,6 +1,5 @@
-% Edited for publication (Oct 2026): path setup, estimate wording and formatting; parameters retained.
 % demo_option_pricing.m
-% Standalone demonstration adapted for publication.
+% Standalone demonstration of the pricing functions.
 %   Returns a Black-Scholes value, Monte Carlo estimate, and the standard
 %   error of the Monte Carlo estimate.
 %

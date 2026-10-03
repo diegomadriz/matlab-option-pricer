@@ -1,5 +1,4 @@
 function paths = simulate_gbm_paths(S0, r, sigma, T, nSteps, nPaths)
-    % Edited for publication (Oct 2026): input guards and formatting; GBM update retained.
     % SIMULATE_GBM_PATHS Simulates GBM paths for an underlying asset.
     %   S0      - initial price
     %   r       - risk-free rate (drift under risk-neutral measure)

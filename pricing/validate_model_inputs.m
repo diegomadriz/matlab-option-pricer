@@ -1,5 +1,4 @@
 function validate_model_inputs(S0, r, sigma, T)
-    % Edited for publication (Oct 2026): new finite real scalar input validation.
     % VALIDATE_MODEL_INPUTS Check scalar assumptions used by the interface.
     values = {S0, r, sigma, T};
     for k = 1:numel(values)

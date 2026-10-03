@@ -1,5 +1,4 @@
 function [price, stderr, discountedPayoffs, paths] = mc_euro_price(S0, K, r, sigma, T, nSteps, nPaths, optionType)
-    % Edited for publication (Oct 2026): input guards and estimate wording; computation retained.
     % MC_EURO_PRICE Monte Carlo estimate for a European option using GBM.
     %   Returns estimated price and standard error.
     %   S0         - current underlying price

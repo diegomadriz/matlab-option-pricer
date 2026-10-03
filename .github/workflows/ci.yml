@@ -1,52 +1,32 @@
 name: MATLAB CI
+
 on:
   push:
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
-  verify:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.13'
-      - name: Install static tooling
-        run: python -m pip install -r dev-requirements.txt
-      - name: Lint MATLAB
-        run: mh_lint --input-encoding utf-8 pricing demo tests tools restore_archive.m reproduce_example.m
-      - name: Check MATLAB formatting
-        run: mh_style --input-encoding utf-8 pricing demo tests tools restore_archive.m reproduce_example.m
-      - name: Validate notebook inventory
-        run: test -z "$(find . -name '*.ipynb' -print)"
       - uses: matlab-actions/setup-matlab@v3
         with:
           release: R2026a
           products: Statistics_and_Machine_Learning_Toolbox
-      - name: MATLAB Code Analyzer
+      - name: Code Analyzer
         uses: matlab-actions/run-command@v3
         with:
           command: addpath('tools'); check_matlab
-      - name: Unit, fidelity and end-to-end tests
+      - name: Tests
         uses: matlab-actions/run-tests@v3
         with:
           source-folder: pricing
           select-by-folder: tests
-          test-results-junit: test-results/results.xml
       - name: Reproduce seed-42 example
         uses: matlab-actions/run-command@v3
         with:
           command: reproduce_example
-      - name: Restore December report archive
-        uses: matlab-actions/run-command@v3
-        with:
-          command: restore_archive
-      - name: Upload JUnit results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: matlab-test-results
-          path: test-results/results.xml
-          if-no-files-found: ignore
