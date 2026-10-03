@@ -70,10 +70,10 @@ function testArchivalEntryPoint(testCase)
                          fileread(fullfile(root, 'evidence', 'RESULTS.md')));
 end
 
-function testReadmeConfigurationTable(testCase)
+function testResultsConfigurationTable(testCase)
     root = testCase.TestData.root;
     evidence = jsondecode(fileread(fullfile(root, 'evidence', 'results.json')));
-    readme = fileread(fullfile(root, 'README.md'));
+    readme = fileread(fullfile(root, 'evidence', 'RESULTS.md'));
     labels = {'Spot', 'Strike', 'Annual risk-free rate', 'Annual volatility', ...
               'Maturity in years', 'Time steps', 'Pricing paths'};
     names = {'S0', 'K', 'r', 'sigma', 'T', 'nSteps', 'nPaths'};

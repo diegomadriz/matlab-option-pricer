@@ -1,5 +1,5 @@
 {
-  "recording_source": "Diego verified app runs supplied for publication on 2026-10-03; these are post-course examples, not December measurements.",
+  "recording_source": "Verified app runs recorded for publication on 2026-10-03; these are post-course examples, not December measurements.",
   "black_scholes_independent_confirmation": "Closed-form Black-Scholes value independently recomputed outside MATLAB (Python, standard normal CDF) and matched to six decimals.",
   "runs": [
     {

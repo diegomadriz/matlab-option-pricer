@@ -42,7 +42,7 @@
     }
   ],
   "provenance": {
-    "app": "app/Final_work.mlapp: Diego re-saved R2026a app, 2026-10-03",
+    "app": "app/Final_work.mlapp: App re-saved in App Designer R2026a, 2026-10-03",
     "demo": "demo/demo_option_pricing.m",
     "figures": "Report/MATLAB_Option_Pricer_DiegoRamirez.pdf",
     "benchmark": "No numerical benchmark saved with December submission; post-course app examples are in example-runs-2026.json."

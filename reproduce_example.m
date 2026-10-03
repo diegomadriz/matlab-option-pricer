@@ -1,4 +1,4 @@
-% Edited for publication (Oct 2026): rerun Diego's post-course seed-42 Pricer example.
+% Edited for publication (Oct 2026): recompute the seed-42 Pricer example.
 % Same calculation sequence as ComputePriceButtonPushed, before plotting.
 S0 = 100;
 K = 102;

@@ -1,6 +1,7 @@
-# Coursework and later examples
+# Project history, recorded runs and configuration
 
-The coursework of record is Diego's December 30, 2025 submission archive.
+Project period: December 2025, with later fixes listed below. The original version is the
+December 30, 2025 submission archive.
 `submission-manifest.json` records its publishable files; the three numerical test
 fixtures are extracted from that archive without changes. The report PDF and its
 extracted figures retain the December evidence, with no saved price table, raw
@@ -9,7 +10,7 @@ samples or figure seed.
 ## Dated changes
 
 - July 9, 2026: the Black-Scholes zero-maturity/zero-volatility deterministic payoff branch was added.
-- October 3, 2026: Diego fixed the Pricer seed-field reference to `SeedEditField` in App Designer and re-saved an internally consistent app in R2026a Update 5. The hand-edited July app is excluded.
+- October 3, 2026: the Pricer seed-field reference was fixed to `SeedEditField` in App Designer and re-saved an internally consistent app in R2026a Update 5. The hand-edited July app is excluded.
 - October 3, 2026: publication work added standalone input guards, demo path/wording edits, tests, reproduction, evidence and CI. The edited MATLAB files are marked in place.
 
 The app's stale December preview preceded its final strike default; it is not
@@ -38,3 +39,18 @@ configuration. It does not regenerate the old random paths.
 The earlier 11-test suite passed in MATLAB Online R2026a on October 3, 2026. CI now
 runs the full 13-test suite on every push. MIT covers the whole repository, report
 included. See `history.json` for verification and license provenance.
+
+## Configuration
+
+| Parameter | App Pricer defaults | Standalone demo |
+| --- | ---: | ---: |
+| Spot | 100 | 100 |
+| Strike | 102 | 100 |
+| Annual risk-free rate | 0.05 | 0.05 |
+| Annual volatility | 0.2 | 0.2 |
+| Maturity in years | 1 | 1 |
+| Time steps | 252 | 252 |
+| Pricing paths | 50,000 | 5,000 |
+| Paths displayed | At most 30 | 20 |
+
+Sources: `results.json`, the app's MATLAB code and `demo/demo_option_pricing.m`.
